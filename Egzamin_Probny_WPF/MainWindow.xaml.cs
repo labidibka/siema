@@ -24,7 +24,6 @@ namespace Egzamin_Probny_WPF
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             int liczba_znakow = int.Parse(znaki.Text);
-
             Random random = new Random();
             string[] tablica = new string[liczba_znakow];
             string[] litery = { "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM" };
@@ -33,15 +32,15 @@ namespace Egzamin_Probny_WPF
 
             for (int i = 0; i < tablica.Length; i++) 
             {
-                if (Wielkie_male.IsChecked == true && Cyfry.IsChecked == false && Specjalne.IsChecked == false )
+                if (Wielkie_male.IsChecked == true)
                 {
                     tablica[0] = litery[random.Next(0, litery.Length)];
                 }
-                else if (Cyfry.IsChecked == true && Wielkie_male.IsChecked == false && Specjalne.IsChecked == false) 
+                else if (Cyfry.IsChecked == true)
                 {
                     tablica[1] = liczby[random.Next(0, liczby.Length)];
                 }
-                else if (Specjalne.IsChecked == true && Cyfry.IsChecked == false && Wielkie_male.IsChecked == false) 
+                else if (Specjalne.IsChecked == true) 
                 {
                     tablica[2] = specjalne[random.Next(0, specjalne.Length)];
                 }
