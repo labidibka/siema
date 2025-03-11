@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <GroupBox Header="Dane Pracownika" Margin="52,66,492,199">
+            <StackPanel>
+                <Label>Imię</Label>
+                <TextBox></TextBox>
+                <Label>Naziwsko</Label>
+                <TextBox></TextBox>
+                <Label>Stanowisko</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+        </GroupBox>
+        
 
     </Grid>
 </Window>
