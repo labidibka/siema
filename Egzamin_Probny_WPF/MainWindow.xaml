@@ -10,12 +10,16 @@
         <GroupBox Header="Dane Pracownika" Margin="52,52,459,176">
             <StackPanel>
                 <Label>Imię</Label>
-                <TextBox></TextBox>
-                <Label>Naziwsko</Label>
-                <TextBox></TextBox>
+                <TextBox x:Name="imie"></TextBox>
+                <Label>Nazwisko</Label>
+                <TextBox x:Name="Nazwisko"></TextBox>
                 <Label>Stanowisko</Label>
-                <ComboBox>
-                    
+                <ComboBox x:Name="stanowisko">
+                    <ComboBoxItem Content="Kierownik"/>
+                    <ComboBoxItem Content="Starszy Programista"/>
+                    <ComboBoxItem Content="Młodszy PRogramista"></ComboBoxItem>
+                    <ComboBoxItem Content="Tester"></ComboBoxItem>
+
                 </ComboBox>
             </StackPanel>
         </GroupBox>
@@ -29,7 +33,7 @@
                 <Button Content="Generuj Hasło" Margin="0,5,0,0" Width="134" Background="SteelBlue" Click="Button_Click" Foreground="White"></Button>
             </StackPanel>
         </GroupBox>
-        <Button Content="Zatwierdź" HorizontalAlignment="Left" Margin="259,345,0,0" VerticalAlignment="Top" Width="286" Height="37" Background="SteelBlue" Foreground="White"></Button>
+        <Button Content="Zatwierdź" HorizontalAlignment="Left" Margin="259,345,0,0" VerticalAlignment="Top" Width="286" Height="37" Background="SteelBlue" Foreground="White" Click="Button_Click_1"></Button>
 
 
 

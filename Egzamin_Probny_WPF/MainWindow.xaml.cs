@@ -24,18 +24,34 @@ namespace Egzamin_Probny_WPF
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Random random = new Random();
-            int[] tablica = new int[10];
+            string[] tablica = new string[10];
             string[] litery = { "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM" };
             string[] liczby = { "0123456789" };
             string[] specjalne = {"!@#$%^&*()_+-="};
 
             for (int i = 0; i < tablica.Length; i++) 
             {
-                int losowa = random.Next(0, 10);
-                tablica[i] = losowa;
+                if (Wielkie_male.IsChecked == true)
+                {
+                    tablica[0] = litery[random.Next(0, litery.Length + 1)];
+                }
+                else if (Cyfry.IsChecked == true)
+                {
+                    tablica[1] = liczby[random.Next(0, liczby.Length + 1)];
+                }
+                else if (Specjalne.IsChecked == true) 
+                {
+                    tablica[2] = specjalne[random.Next(0, specjalne.Length + 1)];
+                }
             }
 
-            MessageBox.Show($"Losowe Hasło Wynosi: {tablica} ");
+            MessageBox.Show($"Losowe Hasło Wynosi: {tablica[0]} ");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+           
+            MessageBox.Show($"Witaj! {imie.Text}, {Nazwisko.Text},{stanowisko.SelectedItem}");
         }
     }
 }
