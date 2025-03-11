@@ -6,18 +6,32 @@
         xmlns:local="clr-namespace:Egzamin_Probny_WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <GroupBox Header="Dane Pracownika" Margin="52,66,492,199">
+    <Grid Background="LightSteelBlue">
+        <GroupBox Header="Dane Pracownika" Margin="52,52,459,176">
             <StackPanel>
                 <Label>Imię</Label>
                 <TextBox></TextBox>
                 <Label>Naziwsko</Label>
                 <TextBox></TextBox>
                 <Label>Stanowisko</Label>
-                <TextBox></TextBox>
+                <ComboBox>
+                    
+                </ComboBox>
             </StackPanel>
         </GroupBox>
-        
+        <GroupBox Header="GroupBox" Margin="471,52,73,176">
+            <StackPanel Height="156">
+                <Label>Ile Znaków?</Label>
+                <TextBox x:Name="znaki"></TextBox>
+                <CheckBox x:Name="Wielkie_male" IsChecked="True" Margin="0,10,0,0">Małe i Wielkie Litery</CheckBox>
+                <CheckBox x:Name="Cyfry" Margin="0,10,0,10">Cyfry</CheckBox>
+                <CheckBox x:Name="Specjalne">Znaki Specjalne</CheckBox>
+                <Button Content="Generuj Hasło" Margin="0,5,0,0" Width="134" Background="SteelBlue" Click="Button_Click" Foreground="White"></Button>
+            </StackPanel>
+        </GroupBox>
+        <Button Content="Zatwierdź" HorizontalAlignment="Left" Margin="259,345,0,0" VerticalAlignment="Top" Width="286" Height="37" Background="SteelBlue" Foreground="White"></Button>
+
+
 
     </Grid>
 </Window>
